@@ -3,9 +3,10 @@ using CMPG323_Project2__33574359.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
-var ConnectionStrings = builder.Configuration.GetConnectionString("DefaultConnection");
-builder.Services.AddDbContext<cmpg323_project2_databaseContext>(options => options.UseSqlServer(ConnectionStrings));
- 
+var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+builder.Services.AddDbContext<cmpg323_project2_databaseContext>(options => options.UseSqlServer(connectionString));
+
+
 // Add services to the container.
 
 builder.Services.AddControllers();
@@ -20,6 +21,15 @@ if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
+}
+else
+{
+    app.UseSwagger();
+    app.UseSwaggerUI(options =>
+    {
+        options.SwaggerEndpoint("/swagger/v1/swagger.json" , "CMPG323_Project2_33574359");
+        options.RoutePrefix = string.Empty;
+    });
 }
 
 app.UseHttpsRedirection();
