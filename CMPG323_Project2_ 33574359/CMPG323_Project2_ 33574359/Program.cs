@@ -5,7 +5,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 var ConnectionStrings = builder.Configuration.GetConnectionString("DefaultConnection");
 builder.Services.AddDbContext<cmpg323_project2_databaseContext>(options => options.UseSqlServer(ConnectionStrings));
-
+ 
 // Add services to the container.
 
 builder.Services.AddControllers();
