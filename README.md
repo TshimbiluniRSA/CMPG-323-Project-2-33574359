@@ -9,4 +9,4 @@ Representational State Transfer (REST) is a model and architectural style for we
 RESTful APIs and services are used as a good practice in the industry to transport data between systems, environments, interfaces and applications. One of the most common use cases is connecting a RESTful API to a data source to manage interaction with the data source. This approach lends many advantages to a solution mostly addressing longevity. RESTful APIs commonly consist of CRUD methods that allow for retrieval of data and manipulation of data (create, read, update and delete).   
 As part of the EcoPower Logistics project, you will create a CRUD RESTful API that will connect to a database storing basic logistics data. The API should contain at least one get, post, patch and delete method per resource – aligning to the project's requirements. The RESTful API architecture has several endpoints called over HTTP, invoking application code to update a database.
 
-33574359-cmpg323-server.database.windows.net
+https://cmpg323project233574359appservice.azurewebsites.net/index.html
